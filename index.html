@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icono.png" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background: white;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, rgb(255, 255, 255), #ffffff, #ffffff);
+            background-size: 200% 200%; /* Tamaño grande para el fondo */
+            animation: changeBackground 4s linear infinite; /* Duración y modo de animación */
+        }
+
+        .heart {
+            position: relative;
+            background-color: #ff0000;
+            height: 150px;
+            width: 150px;
+            transform: rotate(-45deg);
+            animation: beat 2s ease-in-out infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            width: 150px;
+            height: 150px;
+            top: -75px;
+            left: 0;
+        }
+
+        .heart::after {
+            width: 150px;
+            height: 150px;
+            top: 0;
+            left: 75px;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            color: #0e2804;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            border-radius: 50px;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        @keyframes changeBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(0.6) rotate(-45deg);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>FLORES AMARILLAS - PATRICIA ❤️</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <div class="message">Por si no te dieron tus Flores Amarillas...</div>
+        <div class="boton">
+            <button><a href="index2.html">Haz clic aquí</a></button>
+        </div>
+    </div>
+</body>
+</html>
